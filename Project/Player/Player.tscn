@@ -1,8 +1,9 @@
-[gd_scene load_steps=52 format=2]
+[gd_scene load_steps=53 format=2]
 
 [ext_resource path="res://Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Player/Player.png" type="Texture" id=2]
 [ext_resource path="res://Boxes/Hitbox.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Player/SwordHitbox.gd" type="Script" id=4]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 4.0
@@ -738,7 +739,7 @@ states/Run/node = SubResource( 22 )
 states/Run/position = Vector2( 510, 118 )
 transitions = [ "Idle", "Run", SubResource( 23 ), "Run", "Idle", SubResource( 24 ), "Idle", "Attack", SubResource( 36 ), "Attack", "Idle", SubResource( 37 ), "Idle", "Roll", SubResource( 45 ), "Roll", "Idle", SubResource( 46 ) ]
 start_node = "Idle"
-graph_offset = Vector2( -253, -21 )
+graph_offset = Vector2( -250, 24 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=17]
 
@@ -802,6 +803,7 @@ __meta__ = {
 [node name="SwordHitbox" parent="HitboxPivot" instance=ExtResource( 3 )]
 position = Vector2( 15, 0 )
 collision_mask = 24
+script = ExtResource( 4 )
 
 [node name="CollisionShape2D" parent="HitboxPivot/SwordHitbox" index="0"]
 shape = SubResource( 38 )

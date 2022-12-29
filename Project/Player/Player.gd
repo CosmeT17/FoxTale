@@ -22,18 +22,19 @@ var upCounter = 0
 onready var animationPlayer = $AnimationPlayer
 onready var animationTree = $AnimationTree
 onready var animationState = animationTree.get("parameters/playback")
+onready var swordHitbox = $HitboxPivot/SwordHitbox
 
 func _ready():
 	# Set blend position to the initial looking direction
 	animationTree.set("parameters/Idle/blend_position", START_DIRECTION)
 	animationTree.set("parameters/Attack/blend_position", START_DIRECTION)
 	animationTree.set("parameters/Roll/blend_position", START_DIRECTION)
-	# Roll
-	
-#	roll_vector = START_DIRECTION
 	
 	# Activate animation tree to be able to play animations
 	animationTree.active = true
+	
+	# Sword knockback_vector initialized to the player's initial look direction
+	swordHitbox.knockback_vector = START_DIRECTION
 
 # TO DO: Implement strafing
 func _physics_process(delta):
@@ -75,6 +76,8 @@ func move_state(delta):
 		downCounter = 0
 
 	if input_vector != Vector2.ZERO:
+		# Roll and Sword Knockback vectors point to input_vector
+		swordHitbox.knockback_vector = input_vector
 		roll_vector = input_vector
 		
 		# Set blend position to the looking direction
@@ -122,64 +125,3 @@ func roll_animation_finished():
 
 func attack_animation_finished():
 	state = MOVE
-
-# Called when the node enters the scene tree for the first time.
-#func _ready():
-#	print("Hello World")
-
-# Runs every physics step, delta is the time (in seconds) that the last frame took to process
-# Function runs about 1/60 seconds usually
-#func _physics_process(delta):
-	# Better Method, but faster at the diagonals
-#	var input_vector = Vector2.ZERO
-#	input_vector.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
-#	input_vector.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
-	
-	# normalized() makes the length of the vector always equal to 1 -> slower at diagonals
-#	input_vector = input_vector.normalized()
-
-#	if input_vector != Vector2.ZERO:
-#		velocity = velocity.move_toward(input_vector * MAX_SPEED, ACCELERATION * delta)
-		
-#		velocity += input_vector * ACCELERATION * delta
-#		# Cap belocity at MAX_SPEED
-#		velocity = velocity.limit_length(MAX_SPEED)
-	
-#	else:
-#		velocity = Vector2.ZERO
-#		velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
-	
-	# Multiply by delta: Change from one pixel per frame -> x pixels per second
-	# velocity relative to frame rate, slower frame rate -> faster and vice versa
-#	move_and_collide(velocity * delta)
-	
-	# Better Method
-#	var input_vector = Vector2.ZERO
-#	input_vector.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
-#	input_vector.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
-#
-#	if input_vector != Vector2.ZERO:
-#		velocity = input_vector
-#	else:
-#		velocity = Vector2.ZERO
-#
-#	move_and_collide(velocity)
-	
-	# Bad Method
-#	if Input.is_action_pressed("ui_right"):
-#		velocity.x = 4
-#	elif Input.is_action_pressed("ui_left"):
-#		velocity.x = -4
-#	elif Input.is_action_pressed("ui_up"):
-#		velocity.y = -4
-#	elif Input.is_action_pressed("ui_down"):
-#		velocity.y = 4
-#	else:
-#		velocity.x = 0
-#		velocity.y = 0
-	
-#	move_and_collide(velocity)
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
