@@ -4,7 +4,7 @@ const ACCELERATION = 500 # 500
 const MAX_SPEED = 80 # 80
 const FRICTION = 500 # 500
 const ROLL_SPEED = 110 # 120
-const START_DIRECTION = Vector2.LEFT
+export var START_DIRECTION = Vector2.LEFT
 
 enum {
 	MOVE,
