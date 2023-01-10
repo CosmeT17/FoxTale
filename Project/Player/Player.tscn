@@ -51,25 +51,37 @@ tracks/2/keys = {
 "values": [ 90.0 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("HitboxPivot/SwordHitbox/Area1:disabled")
+tracks/3/path = NodePath("HitboxPivot/SwordHitbox:rotation_degrees")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0.1, 0.2 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 90.0, 135.0, 180.0 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("HitboxPivot/SwordHitbox/Area2:disabled")
+tracks/4/path = NodePath("HitboxPivot/SwordHitbox/CollisionShape2D:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0.2, 0.3 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -0.5, -10 ), Vector2( 1.5, -18 ), Vector2( 1, -17 ), Vector2( 0.5, -16 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("HitboxPivot/SwordHitbox/CollisionShape2D:disabled")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.4 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ false, true ]
@@ -117,25 +129,37 @@ tracks/2/keys = {
 "values": [ 180.0 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("HitboxPivot/SwordHitbox/Area2:disabled")
+tracks/3/path = NodePath("HitboxPivot/SwordHitbox:rotation_degrees")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0.1, 0.2 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
+"times": PoolRealArray( 0.000717599, 0.102617, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 180.0, 90.0, 45.0, 0.0 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("HitboxPivot/SwordHitbox/Area1:disabled")
+tracks/4/path = NodePath("HitboxPivot/SwordHitbox/CollisionShape2D:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0.2, 0.3 ),
+"times": PoolRealArray( 0.000717599, 0.102617, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -0.5, -14 ), Vector2( -0.5, -19 ), Vector2( -0.5, -14.5 ), Vector2( -0.5, -10 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("HitboxPivot/SwordHitbox/CollisionShape2D:disabled")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.4 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ false, true ]
@@ -183,25 +207,37 @@ tracks/2/keys = {
 "values": [ 0.0 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("HitboxPivot/SwordHitbox/Area1:disabled")
+tracks/3/path = NodePath("HitboxPivot/SwordHitbox:rotation_degrees")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0.1, 0.2 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 90.0, 135.0, 180.0 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("HitboxPivot/SwordHitbox/Area2:disabled")
+tracks/4/path = NodePath("HitboxPivot/SwordHitbox/CollisionShape2D:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0.2, 0.3 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.5, -14 ), Vector2( 0.5, -19 ), Vector2( 0.5, -15.5 ), Vector2( 0.5, -12 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("HitboxPivot/SwordHitbox/CollisionShape2D:disabled")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.4 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ false, true ]
@@ -249,25 +285,37 @@ tracks/2/keys = {
 "values": [ 270.0 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("HitboxPivot/SwordHitbox/Area1:disabled")
+tracks/3/path = NodePath("HitboxPivot/SwordHitbox:rotation_degrees")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0.1, 0.2 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 90.0, 135.0, 180.0 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("HitboxPivot/SwordHitbox/Area2:disabled")
+tracks/4/path = NodePath("HitboxPivot/SwordHitbox/CollisionShape2D:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0.2, 0.3 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 4.5, -13 ), Vector2( -0.5, -16 ), Vector2( -1.5, -15.5 ), Vector2( -2.5, -15 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("HitboxPivot/SwordHitbox/CollisionShape2D:disabled")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.4 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ false, true ]
@@ -380,7 +428,7 @@ tracks/2/keys = {
 "values": [ true ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("HitboxPivot/SwordHitbox/Area1:disabled")
+tracks/3/path = NodePath("HitboxPivot/SwordHitbox/CollisionShape2D:rotation_degrees")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -388,11 +436,11 @@ tracks/3/enabled = true
 tracks/3/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ true ]
+"update": 0,
+"values": [ 0.0 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("HitboxPivot/SwordHitbox/Area2:disabled")
+tracks/4/path = NodePath("HitboxPivot/SwordHitbox:rotation_degrees")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -400,8 +448,20 @@ tracks/4/enabled = true
 tracks/4/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ true ]
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("HitboxPivot/SwordHitbox/CollisionShape2D:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.5, -14 ) ]
 }
 
 [sub_resource type="Animation" id=40]
@@ -600,6 +660,18 @@ tracks/1/keys = {
 "update": 1,
 "values": [ true ]
 }
+tracks/2/type = "value"
+tracks/2/path = NodePath("HitboxPivot/SwordHitbox/CollisionShape2D:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
 
 [sub_resource type="Animation" id=5]
 resource_name = "RunLeft"
@@ -624,6 +696,18 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("HitboxPivot/SwordHitbox/CollisionShape2D:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
@@ -658,6 +742,18 @@ tracks/1/keys = {
 "update": 1,
 "values": [ true ]
 }
+tracks/2/type = "value"
+tracks/2/path = NodePath("HitboxPivot/SwordHitbox/CollisionShape2D:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
 
 [sub_resource type="Animation" id=4]
 resource_name = "RunUp"
@@ -682,6 +778,18 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("HitboxPivot/SwordHitbox/CollisionShape2D:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
@@ -815,8 +923,8 @@ graph_offset = Vector2( -250, 24 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=17]
 
-[sub_resource type="CircleShape2D" id=52]
-radius = 1.0
+[sub_resource type="RectangleShape2D" id=52]
+extents = Vector2( 1.5, 8 )
 
 [sub_resource type="CircleShape2D" id=51]
 radius = 5.0
@@ -873,22 +981,12 @@ __meta__ = {
 }
 
 [node name="SwordHitbox" parent="HitboxPivot" instance=ExtResource( 3 )]
-position = Vector2( 15, 0 )
 collision_mask = 24
 script = ExtResource( 4 )
 
 [node name="CollisionShape2D" parent="HitboxPivot/SwordHitbox" index="0"]
-position = Vector2( 10, 0 )
+position = Vector2( 0.5, -14 )
 shape = SubResource( 52 )
-disabled = true
-
-[node name="Area1" type="CollisionPolygon2D" parent="HitboxPivot/SwordHitbox"]
-polygon = PoolVector2Array( 10, 0, -10, 0, -10, -6, -9.66889, -8.62052, -8.62833, -11.0175, -7.08608, -13.0331, -4.98639, -14.6683, -2.58939, -15.6531, 0, -16, 2.63197, -15.6531, 5.01038, -14.6311, 7.07291, -13.0703, 8.70807, -10.9706, 9.6743, -8.59215, 10, -6 )
-disabled = true
-
-[node name="Area2" type="CollisionPolygon2D" parent="HitboxPivot/SwordHitbox"]
-rotation = 3.14159
-polygon = PoolVector2Array( 10, 0, -10, 0, -10, -6, -9.66889, -8.62052, -8.62833, -11.0175, -7.08608, -13.0331, -4.98639, -14.6683, -2.58939, -15.6531, 0, -16, 2.63197, -15.6531, 5.01038, -14.6311, 7.07291, -13.0703, 8.70807, -10.9706, 9.6743, -8.59215, 10, -6 )
 disabled = true
 
 [node name="RollHitbox" parent="." instance=ExtResource( 3 )]

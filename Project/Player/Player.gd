@@ -33,8 +33,9 @@ func _ready():
 	# Activate animation tree to be able to play animations
 	animationTree.active = true
 	
-	# Sword knockback_vector initialized to the player's initial look direction
+	# Sword knockback_vector and roll_vector initialized to the player's initial look direction
 	swordHitbox.knockback_vector = START_DIRECTION
+	roll_vector = START_DIRECTION
 
 # TO DO: Implement strafing
 func _physics_process(delta):
