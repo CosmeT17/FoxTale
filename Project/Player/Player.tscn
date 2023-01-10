@@ -467,18 +467,6 @@ tracks/5/keys = {
 "update": 0,
 "values": [ Vector2( 0.5, -14 ) ]
 }
-tracks/6/type = "value"
-tracks/6/path = NodePath("Sprite:frame")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 60 ]
-}
 
 [sub_resource type="Animation" id=40]
 resource_name = "RollDown"
@@ -813,7 +801,7 @@ tracks/2/keys = {
 }
 
 [sub_resource type="Animation" id=53]
-resource_name = "TestSpin"
+resource_name = "SpinUp"
 length = 1.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -972,10 +960,9 @@ __meta__ = {
 position = Vector2( 0, -9 )
 texture = ExtResource( 2 )
 hframes = 62
-frame = 60
+frame = 18
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 rotation = -1.57079
 shape = SubResource( 1 )
 
@@ -997,7 +984,7 @@ anims/RunDown = SubResource( 6 )
 anims/RunLeft = SubResource( 5 )
 anims/RunRight = SubResource( 3 )
 anims/RunUp = SubResource( 4 )
-anims/TestSpin = SubResource( 53 )
+anims/SpinUp = SubResource( 53 )
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource( 16 )
@@ -1009,7 +996,6 @@ parameters/Roll/blend_position = Vector2( 0, 0.1 )
 parameters/Run/blend_position = Vector2( 0, 0.1 )
 
 [node name="HitboxPivot" type="Position2D" parent="."]
-visible = false
 position = Vector2( 0, -4 )
 __meta__ = {
 "_gizmo_extents_": 8.0
@@ -1025,7 +1011,6 @@ shape = SubResource( 52 )
 disabled = true
 
 [node name="RollHitbox" parent="." instance=ExtResource( 3 )]
-visible = false
 collision_mask = 16
 
 [node name="CollisionShape2D" parent="RollHitbox" index="0"]
