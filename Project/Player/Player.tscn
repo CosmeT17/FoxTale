@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=2]
+[gd_scene load_steps=57 format=2]
 
 [ext_resource path="res://Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Player/Player.png" type="Texture" id=2]
@@ -467,18 +467,6 @@ tracks/5/keys = {
 "update": 0,
 "values": [ Vector2( 0.5, -14 ) ]
 }
-tracks/6/type = "value"
-tracks/6/path = NodePath("Sprite:frame")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 63 ]
-}
 
 [sub_resource type="Animation" id=40]
 resource_name = "RollDown"
@@ -828,6 +816,38 @@ tracks/0/keys = {
 "values": [ 36, 37, 38, 61, 62, 29, 30, 25, 26, 27, 18 ]
 }
 
+[sub_resource type="Animation" id=55]
+resource_name = "SpinLeft"
+length = 1.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 60, 61, 62, 29, 30, 25, 26, 37, 38, 39, 12 ]
+}
+
+[sub_resource type="Animation" id=56]
+resource_name = "SpinRight"
+length = 1.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 24, 25, 26, 37, 38, 61, 62, 29, 30, 31, 0 ]
+}
+
 [sub_resource type="Animation" id=53]
 resource_name = "SpinUp"
 length = 1.1
@@ -988,10 +1008,9 @@ __meta__ = {
 position = Vector2( 0, -9 )
 texture = ExtResource( 2 )
 hframes = 64
-frame = 63
+frame = 18
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 rotation = -1.57079
 shape = SubResource( 1 )
 
@@ -1014,6 +1033,8 @@ anims/RunLeft = SubResource( 5 )
 anims/RunRight = SubResource( 3 )
 anims/RunUp = SubResource( 4 )
 anims/SpinDown = SubResource( 54 )
+anims/SpinLeft = SubResource( 55 )
+anims/SpinRight = SubResource( 56 )
 anims/SpinUp = SubResource( 53 )
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
@@ -1026,7 +1047,6 @@ parameters/Roll/blend_position = Vector2( 0, 0.1 )
 parameters/Run/blend_position = Vector2( 0, 0.1 )
 
 [node name="HitboxPivot" type="Position2D" parent="."]
-visible = false
 position = Vector2( 0, -4 )
 __meta__ = {
 "_gizmo_extents_": 8.0
@@ -1042,7 +1062,6 @@ shape = SubResource( 52 )
 disabled = true
 
 [node name="RollHitbox" parent="." instance=ExtResource( 3 )]
-visible = false
 collision_mask = 16
 
 [node name="CollisionShape2D" parent="RollHitbox" index="0"]
