@@ -467,6 +467,18 @@ tracks/5/keys = {
 "update": 0,
 "values": [ Vector2( 0.5, -14 ) ]
 }
+tracks/6/type = "value"
+tracks/6/path = NodePath("Sprite:frame")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 63 ]
+}
 
 [sub_resource type="Animation" id=40]
 resource_name = "RollDown"
@@ -803,7 +815,6 @@ tracks/2/keys = {
 [sub_resource type="Animation" id=54]
 resource_name = "SpinDown"
 length = 1.1
-loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -820,7 +831,6 @@ tracks/0/keys = {
 [sub_resource type="Animation" id=53]
 resource_name = "SpinUp"
 length = 1.1
-loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -831,7 +841,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 28, 29, 30, 25, 26, 37, 38, 61, 62, 32, 6 ]
+"values": [ 28, 29, 30, 25, 26, 37, 38, 61, 62, 63, 6 ]
 }
 
 [sub_resource type="AnimationNodeAnimation" id=31]
@@ -977,8 +987,8 @@ __meta__ = {
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 0, -9 )
 texture = ExtResource( 2 )
-hframes = 63
-frame = 32
+hframes = 64
+frame = 63
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
