@@ -491,4 +491,5 @@ position = Vector2( 145, 160 )
 position = Vector2( 21, 89 )
 
 [node name="Slime" parent="YSort" instance=ExtResource( 8 )]
-position = Vector2( 144.619, 80.0148 )
+position = Vector2( 145.511, 87.15 )
+scale = Vector2( 1, 1 )
